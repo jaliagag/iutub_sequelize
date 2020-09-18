@@ -5,6 +5,7 @@ const router = require('express').Router();
 const { Film } = require('../../db');
 
 router.get('/', async (req, res)=>{
+    console.log(req.usuarioId);
     const films = await Film.findAll(); // devuelve todas las películas
     res.json(films);
 })
